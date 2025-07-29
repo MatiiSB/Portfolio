@@ -1,0 +1,100 @@
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .menu {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .menu nav ul {
+    
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu nav ul li {
+    color: white;
+    font-family: 'Martel', serif;
+    font-size: 2rem;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.8s cubic-bezier(0.4,0,0.2,1), color 0.5s;
+    padding: 10px 20px;
+    border-radius: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box;
+  }
+  
+  .menu nav ul li:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  .menu nav ul li:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .menu nav ul li:hover {
+    /* Fondo sutil, sin cambiar tamaño */
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .menu nav ul li:nth-child(1):hover { background-color: #3b82f6; color: #fff; }
+  .menu nav ul li:nth-child(2):hover { background-color: #6d5eea; color: #fff; }
+  .menu nav ul li:nth-child(3):hover { background-color: #a21ba7; color: #fff; }
+  .menu nav ul li:nth-child(4):hover { background-color: #c155a1; color: #fff; }
+  .menu nav ul li:nth-child(5):hover { background-color: #e0528d; color: #fff; }
+  .menu nav ul li:nth-child(6):hover { background-color: #e11d48; color: #fff; }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
