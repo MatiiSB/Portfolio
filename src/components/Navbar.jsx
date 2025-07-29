@@ -19,9 +19,16 @@ const Navbar = ({ onNavigate }) => {
 
   return (
     <>
-      <button className="hamburger" onClick={() => setOpen(!open)}>
-        {open ? '✖' : '☰'}
-      </button>
+<button
+  className={`hamburger ${open ? 'open' : ''}`}
+  onClick={() => setOpen(!open)}
+  aria-label="Menú"
+>
+  <span />
+  <span />
+  <span />
+</button>
+
       <button onClick={toggleMode} className="toggle-mode-btn" aria-label="Cambiar modo">
         {light ? <RiMoonClearLine /> : <WiSunrise />}
       </button>

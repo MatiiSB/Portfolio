@@ -6,8 +6,8 @@
 
 :root {
   --bg-main: #10002B;         /* fondo general */
-  --bg-alt: #240046;          /* secciones */
-  --card-bg: #7B2CBF;         /* tarjetas */
+  --bg-alt: #050505;          /* secciones */
+  --card-bg: #10002B;         /* tarjetas */
   --text-main: #ffffff;       /* texto principal */
   --text-alt: #ffffff;        /* texto secundario */
   --accent: #E0AAFF;          /* violeta principal */
@@ -394,11 +394,11 @@ p, ul {
 
 
 body.light-mode {
-  --bg-main: #48CAE4;
-  --bg-alt: #90E0EF;
+  --bg-main: #CAF0F8;
+  --bg-alt: #fafafa;
   --card-bg: #CAF0F8;
-  --text-main: #03045E;
-  --text-alt: #03045E;
+  --text-main: #000000;
+  --text-alt: #000000;
   --accent: #00B4D8;
 }
 
@@ -459,4 +459,19 @@ body.light-mode .hamburger {
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   background: #e5e7eb;
 }
+
+.footer {
+  background-color: var(--bg-alt);
+  color: var(--text-alt);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode .footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
   
