@@ -1,29 +1,37 @@
 import Section from '../components/Section';
 // eslint-disable-next-line
 import { motion } from 'framer-motion';
+import { Parallax } from 'react-scroll-parallax';
+import { useEffect, useRef, useState } from 'react';
 
-const Home = () => (
-  <Section
-    id="home"
-    title={
-      <motion.span
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+const Home = () => {
+  const subtitleRef = useRef(null);
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    const y = window.scrollY;
+    setOffsetY(y);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <Section id="home" title={<span>SOY MATIAS SAN BLAS</span>}>
+      <p
+        className="home-subtitle-scroll"
+        ref={subtitleRef}
+        style={{
+          transform: `translateY(-${offsetY * 0.4}px)`,
+          opacity: `${1 - offsetY / 200}`,
+        }}
       >
-        SOY MATIAS SAN BLAS
-      </motion.span>
-    }
-  >
-    <motion.p
-      className="home-subtitle"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
-    >
-      Bienvenido a mi portfolio
-    </motion.p>
-  </Section>
-);
+        Bienvenido a mi portfolio
+      </p>
+    </Section>
+  );
+};
 
 export default Home;

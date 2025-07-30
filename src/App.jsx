@@ -8,6 +8,7 @@ import Contact from './sections/Contact';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import { useState, useEffect } from 'react';
 import './styles/global.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
 
   return (
+    <ParallaxProvider>
     <div className="min-h-screen bg-light dark:bg-dark text-dark dark:text-light transition-colors duration-300">
       <Navbar onNavigate={scrollToSection} />
       <Home />
@@ -30,6 +32,7 @@ function App() {
       <Contact />
       <ScrollToTopButton />
     </div>
+    </ParallaxProvider>
   );
 }
 
