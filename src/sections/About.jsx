@@ -1,5 +1,7 @@
 import Section from '../components/Section'
 import FadeInWhenVisible from '../components/FadeInWhenVisible'
+import fotoPerfil from '../assets/Foto_Nueva_Sonrisa.jpeg';
+
 
 const About = () => (
   <Section id="about" title="Acerca de mí">
@@ -11,7 +13,8 @@ const About = () => (
           </p>
         </div>
         <div className="about-photo">
-          <img src="/profile.jpg" alt="Foto de perfil" />
+          <img src={fotoPerfil} alt="Foto de perfil" />
+
         </div>
       </div>
     </FadeInWhenVisible>
