@@ -589,39 +589,48 @@ body.light-mode .footer {
 
 /* Responsive: mobile view */
 @media screen and (max-width: 768px) {
-  .timeline-2col {
-    padding: 1rem;
-  }
-
-  .timeline-line-center {
-    left: 12px;
-    transform: none;
-    width: 3px;
-  }
-
   .timeline-item-alt {
     width: 100%;
-    padding: 2rem 0 2rem 2rem;
+    padding: 2rem 0;
     text-align: left;
+    position: relative;
   }
 
   .timeline-item-alt.left,
   .timeline-item-alt.right {
     left: 0;
+    text-align: left;
   }
 
   .timeline-item-alt .timeline-dot-alt {
-    left: -4px;
-    right: auto;
-    top: 22px;
+    left: 15px; /* Alineado con la línea */
+  }
+
+  .timeline-line-center {
+    left: 15px;
+    transform: none;
   }
 
   .timeline-card-alt {
-    margin-left: 2.2rem;
-    display: block;
-    width: calc(100% - 2.2rem);
+    width: 85%; /* O 80% si lo preferís más angosto */
+    margin-left: 45px; /* Deja espacio para la línea y el punto */
+    box-sizing: border-box;
   }
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+  .toggle-mode-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
 .home-subtitle-scroll {
   font-size: 3rem;
   font-weight: 300;
