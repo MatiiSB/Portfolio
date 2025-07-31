@@ -643,3 +643,427 @@ body.light-mode .footer {
 }
 
 
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p, ul {
+    font-size: 1rem;
+  }
+
+  .about-card,
+  .contact-card,
+  .skill-card {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 70%;
+  }
+
+  .about-card p {
+    font-size: 1.1rem;
+  }
+
+  .skills-grid {
+    gap: 1.2rem;
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .about-photo{
+    width: 120px;
+    height: 120px;
+
+  }
+  .about-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .timeline-card-alt {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline-period {
+    font-size: 0.9rem;
+    padding: 0.2em 0.8em;
+  }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+  }
+}
+.section {
+  min-height: auto;
+}
+
+@media screen and (max-width: 670px) {
+  .section {
+    padding: 50px 14px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+  #home h2 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.home-subtitle-scroll {
+  font-size: 2rem;
+  text-align: center;
+}
+
+  p, ul {
+    font-size: 0.95rem;
+  }
+
+  .about-card,
+  .contact-card,
+  .skill-card {
+    padding: 1.2rem;
+    width: 100%;
+    max-width: 70%;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .skill-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+.about-photo{
+    width: 100px;
+    height: 100px;
+}
+  .about-photo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline-card-alt {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline-period {
+    font-size: 0.85rem;
+    padding: 0.2em 0.6em;
+  }
+
+  .contact-btn {
+    font-size: 0.85rem;
+    padding: 0.4em 0.9em;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    padding: 40px 12px;
+  }
+
+  #home h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .home-subtitle-scroll {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, ul {
+    font-size: 0.9rem;
+  }
+
+  .about-card,
+  .contact-card,
+  .skill-card {
+    padding: 1rem;
+    max-width: 75%;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .skill-card h3{
+    font-size: 24px;
+  }
+  .skill-tag{
+    font-size: 14px;
+  }
+
+  .about-photo {
+    width: 1px;
+    height: 1px;
+    visibility: hidden;
+  }
+
+  .timeline-card-alt {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .timeline-period {
+    font-size: 0.75rem;
+    padding: 0.2em 0.6em;
+  }
+
+  .timeline-desc{
+    font-size: 15px;
+  }
+
+  .timeline-tag{
+    font-size: 12px;
+  }
+
+  .timeline-dot-alt{
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+
+  .timeline-line-center{
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+
+  .timeline-card-alt{
+    margin: 0.8rem;
+  }
+
+  .skills-grid {
+    gap: 0.6rem;
+  }
+
+  .study-card{
+    height: 9rem;
+    width: 17rem;
+  }
+
+  .study-card h3{
+    font-size: 19px;
+  }
+
+.study-icon{
+  font-size: 2rem;
+}
+
+.study-sub{
+  font-size: 1rem;
+}
+
+  .contact-card h3{
+    font-size: 18px;
+  }
+
+  .contact-info p{
+    font-size: 13px;
+  }
+  .contact-btn {
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .skills-grid {
+    gap: 0.8rem;
+  }
+
+  .toggle-mode-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .hamburger,
+  .hamburger.open {
+  font-size: 1.5rem;
+  width: 23px;
+  height: 18px;
+  top: 16px;
+  right: 16px;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 3px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    padding: 30px 10px;
+  }
+
+  #home h2 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .home-subtitle-scroll {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p, ul {
+    font-size: 0.85rem;
+  }
+
+  .about-card,
+  .contact-card,
+  .skill-card {
+    padding: 0.8rem;
+    max-width: 85%;
+  }
+
+  .about-card p {
+    font-size: 0.85rem;
+  }
+
+  .skill-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .skill-card h3 {
+    font-size: 20px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+  }
+
+  .timeline-card-alt {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
+  .timeline-period {
+    font-size: 0.7rem;
+    padding: 0.2em 0.5em;
+  }
+
+  .timeline-desc {
+    font-size: 14px;
+  }
+
+  .timeline-tag {
+    font-size: 11px;
+  }
+
+  .contact-card h3 {
+    font-size: 16px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+
+  .contact-btn {
+    font-size: 0.75rem;
+    padding: 0.3em 0.7em;
+  }
+
+  .skills-grid {
+    gap: 0.6rem;
+  }
+
+  .study-card{
+    height: 7rem;
+    width: 10rem;
+  }
+
+  .study-card h3{
+    font-size: 14px;
+  }
+
+.study-icon{
+  font-size: 1.5rem;
+}
+
+.study-sub{
+  font-size: 0.8rem;
+}
+
+  .toggle-mode-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
+
+  .hamburger,
+  .hamburger.open {
+    font-size: 1.3rem;
+    width: 22px;
+    height: 16px;
+    top: 14px;
+    right: 14px;
+    
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 3px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}
