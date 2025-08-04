@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Poiret+One&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 :root {
-  --bg-main: #10002B;         /* fondo general */
+  --bg-main: #160336;         /* fondo general */
   --bg-alt: #050505;          /* secciones */
   --card-bg: #10002B;         /* tarjetas */
   --text-main: #ffffff;       /* texto principal */
@@ -12,6 +20,9 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 * {
@@ -23,10 +34,12 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .section {
-  min-height: 100vh;
+  min-height: 100dvh; /* usa altura real visible */
   width: 100%;
   padding: 100px 20px;
   text-align: center;
@@ -34,7 +47,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
+
 
 .section:nth-child(odd) {
   background-color: var(--bg-main);
@@ -595,6 +610,12 @@ body.light-mode .footer {
     text-align: left;
     position: relative;
   }
+.section {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: 100dvh;
+}
+
 
   .timeline-item-alt.left,
   .timeline-item-alt.right {
@@ -645,8 +666,11 @@ body.light-mode .footer {
 
 @media screen and (max-width: 768px) {
   .section {
-    padding: 60px 16px;
-  }
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: 100dvh;
+}
+
 
   h2 {
     font-size: 2rem;
@@ -703,14 +727,14 @@ body.light-mode .footer {
     padding: 0.5em 1em;
   }
 }
-.section {
-  min-height: auto;
-}
 
 @media screen and (max-width: 670px) {
-  .section {
-    padding: 50px 14px;
-  }
+ .section {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  min-height: 100dvh;
+}
+
 
   h2 {
     font-size: 1.7rem;
@@ -777,8 +801,10 @@ body.light-mode .footer {
 
 @media screen and (max-width: 576px) {
   .section {
-    padding: 40px 12px;
-  }
+  min-height: 100dvh;
+  padding: 60px 16px;
+}
+
 
   #home h2 {
     font-size: 2.2rem;
@@ -802,7 +828,8 @@ body.light-mode .footer {
   .contact-card,
   .skill-card {
     padding: 1rem;
-    max-width: 75%;
+    max-width: 70%; 
+
   }
 
   .about-card p {
@@ -934,9 +961,10 @@ body.light-mode .footer {
 }
 
 @media screen and (max-width: 480px) {
-  .section {
-    padding: 30px 10px;
-  }
+   .section {
+  padding: 60px 16px;
+  min-height: 100dvh;
+}
 
   #home h2 {
     font-size: 1.9rem;
@@ -960,7 +988,8 @@ body.light-mode .footer {
   .contact-card,
   .skill-card {
     padding: 0.8rem;
-    max-width: 85%;
+    max-width: 70%; 
+
   }
 
   .about-card p {
