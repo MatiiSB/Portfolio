@@ -9,7 +9,7 @@ const About = () => (
       <div className="about-card about-card-flex">
         <div className="about-text">
           <p>
-            Soy estudiante de cuarto año de Sistemas de la Información y actualmente me desempeño como pasante Analista de Operaciones en COELSA. Me considero una persona proactiva, curiosa y en constante formación, con entusiasmo por aprender y explorar nuevas tecnologías y herramientas dentro del mundo IT. Busco ampliar mis conocimientos en áreas como desarrollo de software, análisis de datos y ciberseguridad, aplicando lo aprendido en mi trabajo para crecer profesionalmente y aportar valor a los proyectos en los que participo.
+            Actualmente me desempeño como Solution Architect Intern en Huawei, formando parte del equipo de Cloud & IT. Estoy en el último año de la carrera de Sistemas de la Información y me apasiona seguir aprendiendo sobre tecnologías emergentes, automatización, infraestructura cloud y ciberseguridad. Me considero una persona proactiva, con una fuerte orientación a la mejora continua y al trabajo en equipo. Mi objetivo es seguir desarrollándome profesionalmente y aportar valor real a los proyectos en los que participo.
           </p>
         </div>
         <div className="about-photo">
