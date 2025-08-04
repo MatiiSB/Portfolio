@@ -24,9 +24,6 @@ html {
   overflow-x: hidden;
 }
 
-* {
-  transition: all 0.3s ease-in-out;
-}
 
 body {
   margin: 0;
@@ -501,13 +498,16 @@ body.light-mode .footer {
 .study-card {
   background: var(--card-bg);
   border: 2px solid var(--text-main);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 16px;
-  width: 300px;
+  width: 90%; /* más flexible */
+  max-width: 300px;
   text-align: center;
-  transition: transform 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 
 .study-card:hover {
   transform: translateY(-5px) scale(1.02);
@@ -891,34 +891,45 @@ body.light-mode .footer {
     gap: 0.6rem;
   }
 
-  .study-card{
-    height: 9rem;
-    width: 17rem;
-  }
+.study-card {
+  padding: 1rem;
+  width: 85%;
+}
 
-  .study-card h3{
-    font-size: 19px;
-  }
+.study-card h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  word-break: break-word;
+}
 
 .study-icon{
   font-size: 2rem;
 }
 
-.study-sub{
-  font-size: 1rem;
+.study-sub {
+  font-size: 0.85rem;
 }
 
-  .contact-card h3{
-    font-size: 18px;
-  }
+.contact-card {
+  width: 85%;
+  padding: 1rem;
+}
 
-  .contact-info p{
-    font-size: 13px;
-  }
-  .contact-btn {
-    font-size: 0.8rem;
-    padding: 0.4em 0.8em;
-  }
+.contact-info p {
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.contact-links {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  font-size: 0.8rem;
+  padding: 0.4em 0.8em;
+}
+
 
   .skills-grid {
     gap: 0.8rem;
@@ -1044,21 +1055,23 @@ body.light-mode .footer {
     gap: 0.6rem;
   }
 
-  .study-card{
-    height: 7rem;
-    width: 10rem;
-  }
+.study-card {
+  padding: 1rem;
+  width: 85%;
+}
 
-  .study-card h3{
-    font-size: 14px;
-  }
+.study-card h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  word-break: break-word;
+}
 
 .study-icon{
   font-size: 1.5rem;
 }
 
-.study-sub{
-  font-size: 0.8rem;
+.study-sub {
+  font-size: 0.85rem;
 }
 
   .toggle-mode-btn {
