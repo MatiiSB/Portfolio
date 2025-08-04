@@ -582,15 +582,18 @@ body.light-mode .footer {
 }
 
 .timeline-dot-alt {
-  position: absolute;
   top: 20px;
+  left: 130%;
+  transform: translateX(-50%);
   width: 16px;
   height: 16px;
   border-radius: 50%;
   border: 3px solid var(--text-main);
   background: var(--accent);
   z-index: 2;
+  position: absolute;
 }
+
 
 .timeline-item-alt.left .timeline-dot-alt {
   right: -10.7%;
@@ -632,13 +635,22 @@ body.light-mode .footer {
     text-align: left;
   }
 
-  .timeline-item-alt .timeline-dot-alt {
-    left: 15px; /* Alineado con la línea */
+   .timeline-card-alt {
+    width: 90%;
+    margin-left: 40px;
   }
+
+  .timeline-dot-alt {
+    left: 0px;
+    transform: translateX(-50%);
+    visibility: hidden;
+  }
+
 
   .timeline-line-center {
     left: 15px;
     transform: none;
+    visibility: hidden;
   }
 
   .timeline-card-alt {
