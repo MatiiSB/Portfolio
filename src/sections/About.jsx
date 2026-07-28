@@ -9,7 +9,11 @@ const About = () => (
       <div className="about-card about-card-flex">
         <div className="about-text">
           <p>
-            Actualmente me desempeño como Solution Architect Intern en Huawei, formando parte del equipo de Cloud & IT. Estoy en el último año de la carrera de Sistemas de la Información y me apasiona seguir aprendiendo sobre tecnologías emergentes, automatización, infraestructura cloud y ciberseguridad. Me considero una persona proactiva, con una fuerte orientación a la mejora continua y al trabajo en equipo. Mi objetivo es seguir desarrollándome profesionalmente y aportar valor real a los proyectos en los que participo.
+            Actualmente me desempeño como Solution Architect Intern en Huawei Cloud, donde diseño e implemento soluciones cloud para clientes, participando en proyectos de arquitectura, automatización, inteligencia artificial y ciberseguridad.
+            
+            Soy Licenciado en Gestión de Tecnologías de la Información de la UADE y me apasiona explorar nuevas tecnologías que generen impacto real en las organizaciones. Disfruto enfrentar desafíos técnicos, aprender de forma continua y transformar problemas complejos en soluciones simples, escalables y eficientes.
+            
+            Mi objetivo es seguir creciendo como Cloud Solution Architect, especializándome en arquitecturas cloud, inteligencia artificial y tecnologías que impulsen la transformación digital.
           </p>
         </div>
         <div className="about-photo">

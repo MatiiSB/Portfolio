@@ -1,28 +1,30 @@
 import Section from '../components/Section';
-// eslint-disable-next-line
-import { motion } from 'framer-motion';
-import { Parallax } from 'react-scroll-parallax';
 import { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
-  const subtitleRef = useRef(null);
   const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => {
-    const y = window.scrollY;
-    setOffsetY(y);
-  };
+  const frame = useRef(0);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      if (frame.current) return;
+      frame.current = requestAnimationFrame(() => {
+        setOffsetY(window.scrollY);
+        frame.current = 0;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frame.current) cancelAnimationFrame(frame.current);
+    };
   }, []);
 
   return (
     <Section id="home" title={<span>SOY MATIAS SAN BLAS</span>}>
       <p
         className="home-subtitle-scroll"
-        ref={subtitleRef}
         style={{
           transform: `translateY(-${offsetY * 0.4}px)`,
           opacity: `${1 - offsetY / 200}`,

@@ -1,6 +1,6 @@
 import Section from '../components/Section';
 import FadeInWhenVisible from '../components/FadeInWhenVisible';
-import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 
 const skills = [
   {

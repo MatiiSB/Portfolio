@@ -9,8 +9,8 @@ const Contact = () => (
         <div className="contact-card">
           <h3><FaUser style={{ marginRight: 8 }} /> Información de Contacto</h3>
           <div className="contact-info">
-            <p><FaEnvelope /> matiassanblas@gmail.com</p>
-            <p><FaPhone /> +54 11 4408-2130</p>
+            <p><FaEnvelope /> <a href="mailto:matiassanblas@gmail.com">matiassanblas@gmail.com</a></p>
+            <p><FaPhone /> <a href="tel:+541144082130">+54 11 4408-2130</a></p>
             <p><FaMapMarkerAlt /> Buenos Aires, Argentina</p>
           </div>
           <hr />

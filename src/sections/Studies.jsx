@@ -7,7 +7,7 @@ const estudios = [
   {
     titulo: 'Lic. en Gestión de Tecnologías de la Información',
     institucion: 'UADE',
-    año: '2021 - Actualidad',
+    año: '2022 - 2026',
     icono: <FaUniversity />,
     color: '#E0AAFF'
   },
