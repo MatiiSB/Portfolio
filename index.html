@@ -1,16 +1,101 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Matías San Blas — Solution Architect Intern en Huawei Cloud. Cloud, arquitectura, automatización e IA." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- SEO -->
+    <title>Matías San Blas — Cloud Solution Architect & AI Engineer</title>
+    <meta
+      name="description"
+      content="Cloud Solution Architect y AI Engineer. Diseño arquitecturas cloud escalables, automatizo infraestructura con IaC e integro IA en soluciones productivas. Solution Architect Intern en Huawei Cloud."
+    />
     <meta name="author" content="Matías San Blas" />
-    <meta property="og:title" content="Matías San Blas — Portfolio" />
-    <meta property="og:description" content="Solution Architect Intern en Huawei Cloud. Cloud, arquitectura, automatización e IA." />
+    <meta name="theme-color" content="#0B0A1A" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-    <title>Matías San Blas — Portfolio</title>
+    <meta property="og:url" content="https://matiasblas.dev/" />
+    <meta property="og:site_name" content="Matías San Blas" />
+    <meta property="og:title" content="Matías San Blas — Cloud Solution Architect & AI Engineer" />
+    <meta
+      property="og:description"
+      content="Diseño arquitecturas cloud escalables, automatizo infraestructura e integro IA. Solution Architect Intern en Huawei Cloud."
+    />
+    <!-- TODO: generar /og-image.png (1200×630) para previews sociales -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matías San Blas — Cloud Solution Architect & AI Engineer" />
+    <meta
+      name="twitter:description"
+      content="Diseño arquitecturas cloud escalables, automatizo infraestructura e integro IA. Solution Architect Intern en Huawei Cloud."
+    />
+
+    <!-- Fuentes (display=swap para no bloquear render) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script anti-flash: aplica el tema antes del primer paint -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var light =
+            stored
+              ? stored === 'light'
+              : window.matchMedia('(prefers-color-scheme: light)').matches;
+          if (light) document.documentElement.classList.add('light-mode');
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Datos estructurados (JSON-LD Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Matías San Blas",
+        "jobTitle": "Cloud Solution Architect & AI Engineer",
+        "description": "Solution Architect Intern en Huawei Cloud. Diseño arquitecturas cloud escalables, automatizo infraestructura e integro IA.",
+        "email": "mailto:matiassanblas@gmail.com",
+        "telephone": "+54-11-4408-2130",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "UADE"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Huawei Cloud"
+        },
+        "knowsAbout": [
+          "Cloud Architecture",
+          "Huawei Cloud",
+          "Artificial Intelligence",
+          "Infrastructure as Code",
+          "Terraform",
+          "Automation",
+          "Kubernetes",
+          "Docker"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/matías-san-blas",
+          "https://github.com/MatiiSB"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

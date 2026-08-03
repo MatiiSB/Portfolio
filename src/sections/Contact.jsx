@@ -1,35 +1,57 @@
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Section from '../components/Section';
-import FadeInWhenVisible from '../components/FadeInWhenVisible';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaUser } from 'react-icons/fa';
+import SectionHeading from '../components/ui/SectionHeading';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import FadeIn from '../components/FadeIn';
+import { profile } from '../data/profile';
 
 const Contact = () => (
-  <>
-    <Section id="contact" title="Contacto">
-      <FadeInWhenVisible>
-        <div className="contact-card">
-          <h3><FaUser style={{ marginRight: 8 }} /> Información de Contacto</h3>
-          <div className="contact-info">
-            <p><FaEnvelope /> <a href="mailto:matiassanblas@gmail.com">matiassanblas@gmail.com</a></p>
-            <p><FaPhone /> <a href="tel:+541144082130">+54 11 4408-2130</a></p>
-            <p><FaMapMarkerAlt /> Buenos Aires, Argentina</p>
-          </div>
-          <hr />
-          <div className="contact-links">
-            <a href="https://www.linkedin.com/in/matías-san-blas" target="_blank" rel="noopener noreferrer" className="contact-btn">
-              <FaLinkedin /> LinkedIn
-            </a>
-            <a href="https://github.com/MatiiSB" target="_blank" rel="noopener noreferrer" className="contact-btn">
-              <FaGithub /> GitHub
-            </a>
-          </div>
+  <Section id="contact">
+    <SectionHeading
+      eyebrow="Hablemos"
+      title="Contacto"
+      subtitle="¿Necesitas diseñar una solución cloud o integrar IA? Conversémoslo."
+    />
+    <FadeIn>
+      <Card variant="glass" className="contact__card">
+        <h3 className="contact__title">Información de contacto</h3>
+        <div className="contact-info">
+          <p className="contact-info__row">
+            <FaEnvelope />
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </p>
+          <p className="contact-info__row">
+            <FaPhone />
+            <a href={`tel:${profile.phoneHref}`}>{profile.phone}</a>
+          </p>
+          <p className="contact-info__row">
+            <FaMapMarkerAlt />
+            {profile.location}
+          </p>
         </div>
-      </FadeInWhenVisible>
-      <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Matías San Blas. Todos los derechos reservados.</p>
-    </footer>
-    </Section>
-    
-  </>
+        <div className="contact__links">
+          <Button
+            as="a"
+            href={profile.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin /> LinkedIn
+          </Button>
+          <Button
+            as="a"
+            variant="secondary"
+            href={profile.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub /> GitHub
+          </Button>
+        </div>
+      </Card>
+    </FadeIn>
+  </Section>
 );
 
 export default Contact;

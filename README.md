@@ -1,12 +1,42 @@
-# React + Vite
+# Matías San Blas — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio profesional de **Cloud Solution Architect & AI Engineer**.
+Construido con React 19 + Vite.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **Vite 6**
+- **framer-motion** (animaciones on-scroll)
+- **react-icons** (iconografía)
+- CSS puro con **design tokens** (sin Tailwind)
 
-## Expanding the ESLint configuration
+## Arquitectura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+  components/ui/      Design system (Card, Button, Badge, ...)
+  components/layout/  Navbar, Footer, ScrollProgress, AnimatedBackground
+  sections/           Hero, About, Stats, Experience, Skills, ...
+  hooks/              useTheme, useScrollProgress, useActiveSection, ...
+  data/               Contenido separado de presentación
+  lib/                constants, motion variants
+  styles/             tokens.css, base.css, components.css
+```
+
+## Scripts
+
+```bash
+npm install      # dependencias
+npm run dev      # desarrollo
+npm run build    # producción
+npm run preview  # preview del build
+```
+
+## TODOs pendientes (verificar antes de deploy)
+
+- `data/certificates.js`: nombres exactos, fechas y URLs de verificación.
+- `data/projects.js` y `data/architecture.js`: refinar con detalles reales.
+- `data/stats.js`: ajustar métricas a valores confirmados.
+- `public/og-image.png`: generar imagen 1200×630 para previews sociales.
+- `public/cv.pdf` y `profile.resumeUrl`: añadir CV descargable.
+- Convertir `Foto_Nueva_Sonrisa.jpeg` a `.webp` con `srcset` responsive.

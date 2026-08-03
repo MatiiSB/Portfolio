@@ -1,13 +1,15 @@
-import Navbar from './components/Navbar';
-import Home from './sections/Home';
+import RootLayout from './layouts/RootLayout';
+import Hero from './sections/Hero';
 import About from './sections/About';
-import Studies from './sections/Studies';
+import Stats from './sections/Stats';
 import Experience from './sections/Experience';
 import Skills from './sections/Skills';
+import ArchitectureGallery from './sections/ArchitectureGallery';
+import Projects from './sections/Projects';
+import Certificates from './sections/Certificates';
+import Studies from './sections/Studies';
 import Contact from './sections/Contact';
-import ScrollToTopButton from './components/ScrollToTopButton';
 import './styles/global.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   const scrollToSection = (id) => {
@@ -15,18 +17,18 @@ function App() {
   };
 
   return (
-    <ParallaxProvider>
-      <div className="app-root">
-        <Navbar onNavigate={scrollToSection} />
-        <Home />
-        <About />
-        <Studies />
-        <Experience />
-        <Skills />
-        <Contact />
-        <ScrollToTopButton />
-      </div>
-    </ParallaxProvider>
+    <RootLayout onNavigate={scrollToSection}>
+      <Hero onNavigate={scrollToSection} />
+      <About />
+      <Stats />
+      <Experience />
+      <Skills />
+      <ArchitectureGallery />
+      <Projects />
+      <Certificates />
+      <Studies />
+      <Contact />
+    </RootLayout>
   );
 }
 

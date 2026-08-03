@@ -1,54 +1,34 @@
-// Studies.jsx (versión con grid de tarjetas)
 import Section from '../components/Section';
-import FadeInWhenVisible from '../components/FadeInWhenVisible';
-import { FaUniversity, FaGraduationCap, FaGoogle, FaLaptopCode } from 'react-icons/fa';
-
-const estudios = [
-  {
-    titulo: 'Lic. en Gestión de Tecnologías de la Información',
-    institucion: 'UADE',
-    año: '2022 - 2026',
-    icono: <FaUniversity />,
-    color: '#E0AAFF'
-  },
-  {
-    titulo: 'Curso Técnico en Computación',
-    institucion: 'Cursa',
-    año: '2024',
-    icono: <FaLaptopCode />,
-    color: '#7c3aed'
-  },
-  {
-    titulo: 'Google Ads Search',
-    institucion: 'Google',
-    año: '2024',
-    icono: <FaGoogle />,
-    color: '#fbbc05'
-  },
-  {
-    titulo: 'Google Ads Display',
-    institucion: 'Google',
-    año: '2024',
-    icono: <FaGoogle />,
-    color: '#0f9d58'
-  }
-];
+import SectionHeading from '../components/ui/SectionHeading';
+import Card from '../components/ui/Card';
+import FadeIn from '../components/FadeIn';
+import { studies } from '../data/studies';
 
 const Studies = () => (
-  <Section id="studies" title="Estudios">
-    <FadeInWhenVisible>
-      <div className="studies-grid">
-        {estudios.map((e, idx) => (
-          <div className="study-card" key={idx}>
-            <div className="study-icon" style={{ color: e.color }}>
-              {e.icono}
-            </div>
-            <h3>{e.titulo}</h3>
-            <p className="study-sub">{e.institucion} – {e.año}</p>
-          </div>
-        ))}
+  <Section id="studies">
+    <SectionHeading
+      eyebrow="Formación"
+      title="Estudios"
+      subtitle="Educación formal y cursos técnicos complementarios."
+    />
+    <FadeIn>
+      <div className="studies__grid">
+        {studies.map((study) => {
+          const Icon = study.icon;
+          return (
+            <Card key={study.titulo} variant="glass" hover className="study-card">
+              <span className="study-card__icon" style={{ color: study.color }}>
+                <Icon />
+              </span>
+              <h3 className="study-card__title">{study.titulo}</h3>
+              <p className="study-card__sub">
+                {study.institucion} — {study.año}
+              </p>
+            </Card>
+          );
+        })}
       </div>
-    </FadeInWhenVisible>
+    </FadeIn>
   </Section>
 );
 
